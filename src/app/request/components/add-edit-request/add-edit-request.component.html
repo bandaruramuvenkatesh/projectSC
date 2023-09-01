@@ -1,0 +1,204 @@
+<div class="card">
+  <div class="card-header">
+    <div
+      class="display-6"
+      [innerHTML]="isEdit ? 'Edit Request' : 'Create Request'"
+    ></div>
+  </div>
+  <div class="card-body">
+    <div class="card-text text-center">Employeement History</div>
+    <div class="row">
+      <div class="card-text mb-2">Previous Company Details</div>
+      <div class="row">
+        <div class="col col-md-6">
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              placeholder="Company Name"
+              [(ngModel)]="request.companyName"
+            />
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="form-group">
+            <label for="datef">Company Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyAddress"
+              placeholder="Company Address"
+              [(ngModel)]="request.companyAddress"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-6">
+        <div class="form-group">
+          <label for="datef">Date Of Joining</label>
+          <input
+            type="date"
+            class="form-control"
+            id="datef"
+            placeholder="Date Of Joining"
+            [(ngModel)]="request.dateOfJoining"
+          />
+        </div>
+      </div>
+      <div class="col col-md-6">
+        <div class="form-group">
+          <label for="datef">Last Working Day</label>
+          <input
+            type="date"
+            class="form-control"
+            id="datef"
+            placeholder="Date Of Joining"
+            [(ngModel)]="request.lastWorkingDate"
+          />
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row mt-2">
+      <div class="card-text mb-2">Previous Company Details -2</div>
+    </div>
+    <div class="row">
+      <div class="row">
+        <div class="col col-md-6">
+          <div class="form-group">
+            <label for="companyName">Company Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              placeholder="Company Name"
+              [(ngModel)]="request.secondCompanyName"
+            />
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="form-group">
+            <label for="datef">Company Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyAddress"
+              placeholder="Company Address"
+              [(ngModel)]="request.secondCompanyAddress"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col col-md-6">
+          <div class="form-group">
+            <label for="datef">Date Of Joining</label>
+            <input
+              type="date"
+              class="form-control"
+              id="datef"
+              placeholder="Date Of Joining"
+              [(ngModel)]="request.secondDateOfJoining"
+            />
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="form-group">
+            <label for="datef">Last Working Day</label>
+            <input
+              type="date"
+              class="form-control"
+              id="datef"
+              placeholder="Date Of Joining"
+              [(ngModel)]="request.secondLastWorkingDate"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div class="row mt-2">
+      <div class="card-text mb-2">Educational Details</div>
+      <div class="row">
+        <div class="col col-md-12">
+          <div class="form-group">
+            <label for="companyName">Highest Qualification</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              placeholder="Highest Qualification"
+              [(ngModel)]="request.highestQualification"
+            />
+          </div>
+        </div>
+
+        <div class="col col-md-12">
+          <div class="form-group">
+            <label for="collegeName">College / University</label>
+            <input
+              type="text"
+              class="form-control"
+              id="companyName"
+              placeholder="Highest Qualification"
+              [(ngModel)]="request.college"
+            />
+          </div>
+        </div>
+
+        <div class="col col-md-12">
+          <div class="form-group">
+            <label for="collegeYear">Year Of Passing</label>
+            <input
+              type="number"
+              class="form-control"
+              id="companyYear"
+              placeholder="Highest Qualification"
+              [(ngModel)]="request.yearOfPassing"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="isEdit && !isUser">
+      <div class="col col-md-12">
+        <div class="form-group">
+          <label for="status">Status</label>
+          <input
+            type="text"
+            class="form-control"
+            id="status"
+            placeholder="Status"
+            [(ngModel)]="request.status"
+          />
+        </div>
+      </div>
+
+      <div class="col col-md-12">
+        <div class="form-group">
+          <label for="remarks">Remarks</label>
+          <input
+            type="text"
+            class="form-control"
+            id="remarks"
+            placeholder="Remarks"
+            [(ngModel)]="request.remarks"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col col-md-12 text-center mt-4">
+        <button class="btn btn-primary w-50" (click)="submit()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>

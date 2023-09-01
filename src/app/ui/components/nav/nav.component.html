@@ -1,0 +1,22 @@
+<div class="row bg-light">
+  <div class="col col-md-12 bg-success">
+    <div class="display-6 text-light">Background Verification</div>
+  </div>
+  <div class="col col-md-12 mt-5 bg-light">
+    <div *ngIf="who === 'user'">
+      <a routerLink="/user" class="btn btn-outline-primary w-100">Home</a>
+      <a routerLink="/create" class="btn btn-outline-primary w-100 mt-1"
+        >Create Request</a
+      >
+    </div>
+    <div *ngIf="who === 'admin'">
+      <a routerLink="/admin" class="btn btn-outline-primary w-100">Home</a>
+    </div>
+    <a
+      routerLink="/"
+      class="btn btn-outline-primary w-100 mt-1"
+      *ngIf="who !== 'home'"
+      >Logout</a
+    >
+  </div>
+</div>
